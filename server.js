@@ -29,7 +29,7 @@ const port = args['port'] || 3000
 // 3. end with the data that you are reading in from ./www/index.html.
 const server = http.createServer((req, res) => {
     try{
-        data = fs.readFileSync(process.cwd() + '/www/index.html', 'utf8')
+        data = fs.readFileSync('./www/index.html', 'utf8')
     } catch (err) {
         console.error(err)
         return process.exit(1) 
