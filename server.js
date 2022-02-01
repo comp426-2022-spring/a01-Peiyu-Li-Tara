@@ -24,8 +24,7 @@ const port = args['port'] || process.env.PORT || 3000
 fs.readFile('./www/index.html', 'utf8' , (err, data) => {
     if (err) {
         console.error(err)
-        return 
-        process.exit(1)
+        return
     }
 
     // Define a const `server` as an arrow function using http.createServer. 
@@ -48,3 +47,4 @@ fs.readFile('./www/index.html', 'utf8' , (err, data) => {
 })
 
 // That's it! You're all done!
+process.exit(1)
